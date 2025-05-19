@@ -140,7 +140,7 @@ export class AuthService {
             maxAge: 7 * 24 * 60 * 60 * 1000,
         });
 
-        return `${clientUrl}/login?verification=succeed`;
+        return `${clientUrl}/workspace?verification=succeed`;
     }
 
     private async hashPassword(password: string): Promise<string> {

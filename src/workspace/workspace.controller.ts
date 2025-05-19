@@ -18,9 +18,13 @@ export class WorkspaceController {
     return this.workspaceService.findOne(+id);
   }
 
+  @Get('slug/:slug')
+  findBySlug(@Param('slug') slug: string) {
+    return this.workspaceService.findOneBySlug(slug);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateWorkspaceDto: UpdateWorkspaceDto) {
-    console.log('id ::', id);
     return this.workspaceService.update(+id, updateWorkspaceDto);
   }
 

@@ -26,6 +26,9 @@ import {UserModule} from "../user/user.module";
         synchronize: false,
         migrations: MIGRATIONS_PATH,
         migrationsRun: true,
+        ssl: {
+          rejectUnauthorized: false, // Accept self-signed certificates (for development) / NOT secure HTTP
+        },
       }),
     })
   ],

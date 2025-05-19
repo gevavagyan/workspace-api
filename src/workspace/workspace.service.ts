@@ -10,15 +10,20 @@ export class WorkspaceService {
   async create(createWorkspaceDto: CreateWorkspaceDto, user: number) {
     return this.workspaceRepository.createWorkspace({...createWorkspaceDto}, user);
   }
-  findOne(id: number) {
+
+  async findOne(id: number) {
     return this.workspaceRepository.findByPK(id);
+  }
+
+  async findOneBySlug(slug: string) {
+    return this.workspaceRepository.findBySlug(slug);
   }
 
   update(id: number, updateWorkspaceDto: UpdateWorkspaceDto) {
     return this.workspaceRepository.updateWorkspace(id, updateWorkspaceDto);
   }
 
-  remove(id: number) {
+  async remove(id: number) {
    return  this.workspaceRepository.deleteWorkspace(id);
   }
 
