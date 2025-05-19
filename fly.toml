@@ -1,4 +1,4 @@
-app = "workspace-api-v1"
+app = "workspace-api"
 primary_region = "fra"
 
 [build]
