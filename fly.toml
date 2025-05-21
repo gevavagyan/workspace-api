@@ -6,7 +6,18 @@ primary_region = "fra"
 
 [env]
   NODE_ENV = "production"
-  PORT = "3000"
+  API_PORT = "3000"
+  API_ORIGIN = "http://localhost:3000"
+  CLIENT_ORIGIN = "http://localhost:3001"
+  DB_PORT = "15171"
+  DB_USERNAME = "avnadmin"
+  DB_HOST = "workspace-db-gevorgavagyan99-21b5.j.aivencloud.com"
+  DB_DIALECT = "postgres"
+  DB_NAME = "workspace_db_v1"
+  MJ_SENDER_NAME = "WorkspaceR Team"
+  MJ_SENDER_EMAIL = "gevorgavagyan99@gmail.com"
+  # DO NOT include secrets here!
+  # Use fly secrets set ...
 
 [[services]]
   internal_port = 3000
